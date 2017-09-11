@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="{{ route('car.create') }}" class="btn btn-info">Добавить авто</a>
+                    <a href="{{ route('car.search') }}" class="btn btn-default">Поиск авто</a>
                 </div>
             </div>
         </div>

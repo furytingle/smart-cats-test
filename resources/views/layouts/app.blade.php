@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -36,7 +36,9 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        @if (Auth::check())
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -75,6 +77,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('public/js/app.js') }}"></script>
+
+    @yield('scripts')
 </body>
 </html>

@@ -18,3 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('auth')->prefix('car')->as('car.')->group(function () {
+    Route::get('brands', 'CarController@getBrands')->name('brands');
+
+    Route::get('search', 'CarController@search')->name('search');
+
+    Route::get('create', 'CarController@create')->name('create');
+    Route::post('create', 'CarController@store')->name('store');
+});
+
+Event::listen('illuminate.query',function($query){
+    var_dump($query);
+});
