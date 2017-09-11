@@ -1,3 +1,13 @@
+<h3>Laravel 5.5</h3>
+<ul>
+    <li>composer install</li>
+    <li>php artisan migrate</li>
+    <li>php artisan db:seed --class=CategoriesTableSeeder</li>
+    <li>php artisan db:seed --class=CarBrandsTableSeeder</li>
+</ul>
+
+Аутентификация из коробки. Проходите регистрацию, переходите на домашнюю страницу, там дальше всё предельно ясно.
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
